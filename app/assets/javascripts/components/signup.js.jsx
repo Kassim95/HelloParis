@@ -5,7 +5,7 @@ var Signup = React.createClass({
 			lname: '',
 			email: '',
 			password: '',
-			score: 0
+			score: ''
 		}
 	},
  	handleChange: function(e) {
@@ -20,25 +20,23 @@ var Signup = React.createClass({
 	},
 
 	handleSubmit: function(e){
-		e.preventDefault();
-		$.post('',
-           { signup: this.state },
-           'JSON'
-    );
-	},
 
+	},
 	render: function(){
 		return(
-			<form className="signupForm" onSubmit={this.handleSubmit}>
-				<input type="text" placeholder="First name" value={this.props.fname}/>
+			<form className="signupForm" action="/users" method="post" onSubmit={this.handleSubmit}>
+				<input type="text" placeholder="First name" name="[user][fname]" value={this.props.fname}/>
 				<br/>
-				<input type="text" placeholder="Last name" value={this.props.lname}/>
+				<input type="text" placeholder="Last name" name='[user][lname]' value={this.props.lname}/>
 				<br/>
-				<input type="text" placeholder="E-mail" value={this.props.email}/>
+				<input type="email" placeholder="E-mail" name="[user][email]" value={this.props.email}/>
 				<br/>
-				<input type="text" placeholder="Password" value={this.props.password}/>
+				<input type="password" placeholder="Password" name="[user][password]" value={this.props.password}/>
 				<br/>
-				<input type='submit' className='btn'/>
+				<input type="password" placeholder="Password" name="[user][password_confirmation]" value={this.props.password}/>
+				<br/>
+				<input type="hidden"  name="[user][score]" value='0'/>
+				<input type='submit' className='btn' />
 			</form>
 			)
 	}
