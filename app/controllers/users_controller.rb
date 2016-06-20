@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 	def index 
 		# @exercice= Lesson.find(rand(0...Lesson.length))
-		# session.clear
 		@exercice= Lesson.all
 	end 
 	
@@ -12,6 +11,12 @@ class UsersController < ApplicationController
 		else
 			render json: @user.errors, status: :unprocessable_entity
 		end		
+	end
+
+	def update
+		@user= User.find(session[:user_id])
+		@score = @user.score
+		@user.update(score: @score + 10)
 	end
 
 	private 

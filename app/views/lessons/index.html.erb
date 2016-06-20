@@ -1,4 +1,33 @@
+<div id="tabs">
+  <ul>
+	  <% if session[:user_id]%>
+	    <li><a href="#tabs-1">Profil</a></li>
+	    <li><a href="#tabs-2">Exercices</a></li>
+	    <li><a href="#tabs-3">Rank</a></li>
+	  <% else %>
+	    <li><a href="#tabs-4">Login</a></li>
+	  <% end %>
+  </ul>
+  <% if session[:user_id]%>
+	  <div id="tabs-1">
+	    <% @current_student = @student.find(session[:user_id])%>
+			<h2 id="greeting">Bonjour, <%= @current_student.email%></h2>
+	  </div>
+	  <div id="tabs-2">
+	    <%= react_component 'Exercices', { exercice1: @exercice1, exercice2: @exercice2, exercice3: @exercice3 } %>
+	  </div>
+	  <div id="tabs-3">
+	    <% i = 1 %>
+	    <% @rank.each do |ranks| %>
+	    	<%= "#{i} - #{ranks.email} ------- #{ranks.score} points" %>
+	    	<% i += 1%>
+	    	<br>
 
-<%= react_component 'Exercices', { data: @exercices} %>
-<%= react_component 'Login', { session: @session} %>
-<%= react_component 'Signup', { signup: @user} %>
+	    <% end %>
+	  </div>
+  <% else %>
+  	<div id="tabs-4">
+  		<%= react_component 'Login', { session: @session, signup: @user} %>
+  	</div>
+  <% end %>
+</div>

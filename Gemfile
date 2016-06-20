@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'pry'
 gem 'bcrypt'
 gem 'react-rails', '~> 1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
