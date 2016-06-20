@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :beginners
+  resources :intermediates
+  resources :expert
   resources :sessions
   resources :users
   resources :lessons
