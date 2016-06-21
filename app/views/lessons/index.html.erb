@@ -1,3 +1,4 @@
+
 <div id="tabs">
   <ul>
 	  <% if session[:user_id]%>
@@ -14,7 +15,7 @@
 			<h2 id="greeting">Bonjour, <%= @current_student.email%></h2>
 	  </div>
 	  <div id="tabs-2">
-	    <%= react_component 'Exercices', { exercice1: @exercice1, exercice2: @exercice2, exercice3: @exercice3, intermexericice1: @intermexericice1, intermexericice2: @intermexericice2, intermexericice3: @intermexericice3 } %>
+	    <%= react_component 'Exercices', { exercice1: @exercice1, exercice2: @exercice2, exercice3: @exercice3, intermexercice1: @intermexercice1, intermexercice2: @intermexercice2, intermexercice3: @intermexercice3, exptexercice1: @exptexercice1, exptexercice2: @exptexercice2, exptexercice3: @exptexercice3} %>
 	  </div>
 	  <div id="tabs-3">
 	    <% i = 1 %>

@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       # binding.pry
       redirect_to lessons_path
   	else 
-  		redirect_to users_path
+  		redirect_to lessosn_path
   	end   
   end
 
