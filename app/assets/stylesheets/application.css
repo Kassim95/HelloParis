@@ -13,3 +13,67 @@
  *= require_tree .
  *= require_self
  */
+body{
+	background-image: url("flag.png");
+	background-size: 100%;
+}
+#tabs{
+	height: 610px;
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	background: #e6f2ff;
+	opacity: 0.9;
+
+}
+.ui-tabs .status1 {
+    border:none;
+}
+.ui-tabs .status2 {
+    border:none;
+}
+.ui-tabs .status3 {
+    border:none;
+}
+.ui-tabs .ui-tabs-nav
+{
+	border-bottom:none;
+}
+#tabs-1{
+	background: white;
+}
+.lependu{
+	height: 250px;
+	width: 250px;
+}
+.flashcard{
+	background-image: url('paris.png');
+	background-repeat: no-repeat;
+	background-size: 250px 250px;
+	margin: 20px;
+	width: 250px;
+	height: 250px;
+	float: left;
+	margin-left: 100px;
+	text-align: center;
+}
+
+.next{
+	float: left;
+	margin-left: 100px;
+}
+.blue{
+	color: blue;
+}
+.red{
+	color: red;
+}
+.francais{
+
+}
+.english{
+	margin-top: 50px;
+}

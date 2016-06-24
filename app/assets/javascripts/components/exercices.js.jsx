@@ -15,7 +15,10 @@ var Exercices = React.createClass({
       check: false,
       guess: '',
       guess2: '',
-      guess3: ''
+      guess3: '',
+      error1: false,
+      error2: false,
+      error3: false,
     };
   },
   sayIt1: function(){
@@ -57,6 +60,19 @@ var Exercices = React.createClass({
   onNext3: function(){
     this.setState({pendu3: true});
   },
+  errorCondition: function(){
+    if(errorCount == 1){
+      $('.lependu1').show();
+    };
+    if(errorCount == 2){
+      $('.lependu1').hide();
+      $('.lependu2').show();
+    };
+    if (errorCount >= 3){
+      $('.lependu2').hide();
+      $('.lependu3').show();
+    };
+  },
   guessLetter: function(e){
     var rightAns = false;
     if(e.keyCode === 13){
@@ -70,19 +86,22 @@ var Exercices = React.createClass({
           console.log(indents);
         } 
       }
-      $
       if (!rightAns){
         errorCount ++;
-      }
+      };
+      if (errorCount == 2 ){
+        $('.help1').show();
+      }; 
       if (errorCount >= 3){
         this.setState({lost: true})
-      } 
+      };
       if(indents.toString() == letter.toString()){
         this.setState({win: true});
-      }
+      };
       this.refs.guess.value = "";
       console.log(errorCount);
     }
+      this.errorCondition();
   },
   guessLetter2: function(e){
     var rightAns = false;
@@ -100,16 +119,20 @@ var Exercices = React.createClass({
   
       if (!rightAns){
         errorCount ++;
-      }
+      };
+      if (errorCount == 2 ){
+        $('.help2').show();
+      } 
       if (errorCount >= 3){
         this.setState({lost: true})
-      }
+      };
       if(indents2.toString() == letter2.toString()){
         this.setState({win2: true});
-      }
+      };
       this.refs.guess2.value = "";
       console.log(errorCount);
     }
+    this.errorCondition();
   },
   guessLetter3: function(e){
     var rightAns = false;
@@ -123,7 +146,7 @@ var Exercices = React.createClass({
           console.log(indents3);
         } 
       }
-      $
+      
       if (!rightAns){
         errorCount ++;
       }
@@ -136,14 +159,88 @@ var Exercices = React.createClass({
       this.refs.guess3.value = "";
       console.log(errorCount);
     }
+    this.errorCondition();
   },
+  beg: function(){
+    $('.beg1').show();
+    $('.thisflash').css('background-image','none');
+  },
+  begout: function(){
+    $('.beg1').hide();
+    $('.thisflash').css('background-image','url(assets/paris.png)');
+  },
+  beg2: function(){
+    $('.beg2').show();
+    $('.thisflash2').css('background-image','none');
+  },
+  begout2: function(){
+    $('.beg2').hide();
+    $('.thisflash2').css('background-image','url(assets/paris.png)');
+  },
+  beg3: function(){
+    $('.beg3').show();
+    $('.thisflash3').css('background-image','none');
+  },
+  begout3: function(){
+    $('.beg3').hide();
+    $('.thisflash3').css('background-image','url(assets/paris.png)');
+  }, 
+  interm: function(){
+    $('.interm1').show();
+    $('.thisflash4').css('background-image','none');
+  },
+  intermout: function(){
+    $('.interm1').hide();
+    $('.thisflash4').css('background-image','url(assets/paris.png)');
+  },
+  interm2: function(){
+    $('.interm2').show();
+    $('.thisflash5').css('background-image','none');
 
+  },
+  intermout2: function(){
+    $('.interm2').hide();
+    $('.thisflash5').css('background-image','url(assets/paris.png)');
+  },
+  interm3: function(){
+    $('.interm3').show();
+    $('.thisflash6').css('background-image','none');
+  },
+  intermout3: function(){
+    $('.interm3').hide();
+     $('.thisflash6').css('background-image','url(assets/paris.png)');
+  },
+  expt: function(){
+    $('.expt1').show();
+    $('.thisflash7').css('background-image','none');
+  },
+  exptout: function(){
+    $('.expt1').hide();
+    $('.thisflash7').css('background-image','url(assets/paris.png)');
+  },
+  expt2: function(){
+    $('.expt2').show();
+    $('.thisflash8').css('background-image','none');
+  },
+  exptout2: function(){
+    $('.expt2').hide();
+    $('.thisflash8').css('background-image','url(assets/paris.png)');
+  },
+  expt3: function(){
+    $('.expt3').show();
+    $('.thisflash9').css('background-image','none');
+  },
+  exptout3: function(){
+    $('.expt3').hide();
+    $('.thisflash9').css('background-image','url(assets/paris.png)');
+  },
   render: function(){
     errorCount = 0
     indents = [];
     indents2 = [];
     indents3 = [];
     indentsResult = [];
+    var hidden = {display: 'none'}
     var style = {display: "none"};
     var btnHide = {display: "block"};
     var next = {display: "none"};
@@ -157,6 +254,11 @@ var Exercices = React.createClass({
     var intermlast = {display: "none"};
     var expt = {display: "none"};
     var exptlast = {display: "none"};
+    var therror1 = {display: "none"};
+    var therror2 = {display: "none"};
+    var therror3 = {display: "none"};
+    var audio1 = {display: "none"};
+    var audio2 = {display: "none"};
     var arrayWords = [this.props.exercice1.exercice,this.props.exercice2.exercice, this.props.exercice3.exercice];
     letter = arrayWords[Math.floor(Math.random()*arrayWords.length)].split('');
     var arrayWords2 = [this.props.intermexercice1.exercice,this.props.intermexercice2.exercice, this.props.intermexercice3.exercice]
@@ -213,21 +315,21 @@ var Exercices = React.createClass({
         <div style={youlost}>
           <h1> You Lost! </h1>
           <form  action="/lessons" method='get' >
-            <input type="submit" value="Go to profil" />
+            <input type="submit" value="Go to profile" />
           </form>
         </div>
 
         <div style={youwin}>
           <h1>You won! </h1>
           <form  action="/beginners" method='get' >
-            <input type="submit" value="Go to profil" />
+            <input type="submit" value="Go to profile" />
           </form>
         </div>
 
         <div style={youwin2}>
           <h1> You won! </h1>
           <form  action="/intermediates" method='get' >
-            <input type="submit" value="Go to profil" />
+            <input type="submit" value="Go to profile" />
           </form>
         </div>
 
@@ -244,33 +346,48 @@ var Exercices = React.createClass({
         <input style={btnHide} type="submit" value="Expert" onClick={this.onClick2} />
 
         <div style={style}>
-          <h1 >{this.props.exercice1.exercice} : {this.props.exercice1.translation}</h1>
-          <h1 >{this.props.exercice2.exercice} : {this.props.exercice2.translation}</h1>
-          <h1>{this.props.exercice3.exercice} : {this.props.exercice3.translation}</h1>
-          <input type="submit" value="Next" onClick={this.onNext} />
+          <div className="flashcard thisflash" onMouseEnter = {this.beg} onMouseLeave = {this.begout} >
+              <h2 style={hidden} className="francais beg1"><span className="blue">French</span><br/><br/> {this.props.exercice1.exercice}</h2><h2 style={hidden} className="english beg1"><span className="red">English</span><br/><br/>{this.props.exercice1.translation}</h2>
+          </div>
+          <div className="flashcard thisflash2" onMouseEnter = {this.beg2} onMouseLeave = {this.begout2}>
+            <h2 style={hidden} className="francais beg2"><span className="blue">French</span><br/><br/> {this.props.exercice2.exercice}</h2><h2 style={hidden} className="english beg2"><span className="red">English</span><br/><br/>{this.props.exercice2.translation}</h2>
+          </div>
+          <div className="flashcard thisflash3" onMouseEnter = {this.beg3} onMouseLeave = {this.begout3}>
+            <h2 style={hidden} className="francais beg3"><span className="blue">French</span><br/><br/> {this.props.exercice3.exercice}</h2><h2 style={hidden} className="english beg3"><span className="red">English</span><br/><br/>{this.props.exercice3.translation}</h2>
+          </div>
+          <br/>
+          <input className="next" type="submit" value="Next" onClick={this.onNext} />
         </div>
 
         <div style={next}>
           <input type="text" placehodler="Enter a letter" ref="guess" value={this.props.guess} maxLength="1" onKeyDown={this.guessLetter} />
-          <br/>
+          <button style={audio1} className="help1" type='button' onClick={this.sayIt1}><img  src="assets/speaker.png"/>
+          </button>
             {letter.map(function(letter, i){
               indents.push("_ ")
             })}
-
             <h1 className="result" style={checked}>{indents}</h1>
-            <input  type='button' onClick={this.sayIt1} value='audio' />                      
         </div>
+                            
 
 
         <div style={interm}>
-          <h1 >{this.props.intermexercice1.exercice} : {this.props.intermexercice1.translation}</h1>
-          <h1 >{this.props.intermexercice2.exercice} : {this.props.intermexercice2.translation}</h1>
-          <h1>{this.props.intermexercice3.exercice} : {this.props.intermexercice3.translation}</h1>
-          <input type="submit" value="Next" onClick={this.onNext2} />
+          <div className="flashcard thisflash4" onMouseEnter = {this.interm} onMouseLeave = {this.intermout}>
+            <h2 style={hidden} style={hidden} className="francais interm1"><span className="blue">French</span><br/><br/> {this.props.intermexercice1.exercice}</h2><h2 style={hidden} stly={hidden} className="english interm1"><span className="red">English</span><br/><br/>{this.props.intermexercice1.translation}</h2>
+          </div>
+          <div className="flashcard thisflash5" onMouseEnter = {this.interm2} onMouseLeave = {this.intermout2}>
+            <h2 style={hidden} className="francais interm2"><span className="blue">French</span><br/><br/> {this.props.intermexercice2.exercice}</h2><h2 style={hidden} className="english interm2"><span className="red">English</span><br/><br/>{this.props.intermexercice2.translation}</h2>
+          </div>
+          <div className="flashcard thisflash6" onMouseEnter = {this.interm3} onMouseLeave = {this.intermout3}>
+            <h2 style={hidden} className="francais interm3"><span className="blue">French</span><br/><br/> {this.props.intermexercice3.exercice}</h2><h2 style={hidden} className="english interm3"><span className="red">English</span><br/><br/>{this.props.intermexercice3.translation}</h2>
+          </div>
+          <input className="next" type="submit" value="Next" onClick={this.onNext2} />
         </div>
 
         <div style={intermlast}>
           <input type="text" placehodler="Enter a letter" ref="guess2" value={this.props.guess2} maxLength="1" onKeyDown={this.guessLetter2}  />
+           <button style={audio2} className="help2" type='button' onClick={this.sayIt1}><img  src="assets/speaker.png"/>
+          </button>                        
           <br/>
             {letter2.map(function(letter2, i){
               if (letter2 == " "){
@@ -281,20 +398,22 @@ var Exercices = React.createClass({
             })}
 
             <h1 className="result" style={checked}>{indents2}</h1>
-            <input type='button' onClick={this.sayIt2} value='audio' />                         
         </div>
 
         <div style={expt}>
-          <input  type='button' onClick={this.audioexpert1} value='audio' /> 
-          <h1> : {this.props.exptexercice1.translation} </h1>
-          <br/>
-          <input  type='button' onClick={this.audioexpert2} value='audio' />
-          <h1> : {this.props.exptexercice2.translation} </h1>
-          <br/>
-          <input  type='button' onClick={this.audioexpert3} value='audio' />
-          <h1> : {this.props.exptexercice3.translation} </h1>
-          <br/>
-          <input type="submit" value="Next" onClick={this.onNext3} />
+          <div className="flashcard thisflash7" onMouseEnter = {this.expt} onMouseLeave = {this.exptout}>
+            <h2 style={hidden} className="francais expt1"><span className="blue">French</span></h2><button style={hidden} className="help2 expt1" type='button' onClick={this.audioexpert1}><img style={hidden} className="expt1" src="assets/speaker.png"/>
+          </button> <h4 style={hidden} className="english expt1"><span className="red">English</span><br/><br/>{this.props.exptexercice1.translation}</h4>
+          </div>
+          <div  className="flashcard thisflash8" onMouseEnter = {this.expt2} onMouseLeave = {this.exptout2}>
+            <h2 style={hidden} className="francais expt2"><span className="blue">French</span></h2><button style={hidden} className="help2 expt2 " type='button' onClick={this.audioexpert2}><img  style={hidden} className="expt2" src="assets/speaker.png"/>
+          </button> <h4 style={hidden} className="english expt2"><span className="red">English</span><br/><br/>{this.props.exptexercice2.translation}</h4>
+          </div>
+          <div className="flashcard thisflash9" onMouseEnter = {this.expt3} onMouseLeave = {this.exptout3}>
+            <h2 style={hidden} className="francais expt3"><span className="blue">French</span></h2><button style={hidden}  className="help2 expt3" type='button' onClick={this.audioexpert3}><img style={hidden} className="expt3" src="assets/speaker.png"/>
+          </button> <h4 style={hidden} className="english expt3"><span className="red">English</span><br/><br/>{this.props.exptexercice3.translation}</h4>
+          </div>
+          <input className="next" type="submit" value="Next" onClick={this.onNext3} />
         </div>
 
         <div style={exptlast}>
@@ -310,6 +429,9 @@ var Exercices = React.createClass({
 
             <h1 className="result" style={checked}>{indents3}</h1>                      
         </div>
+         <img style={therror1} className="lependu lependu1" src="assets/french-flag1.png"/>  
+          <img style={therror2} className="lependu lependu2" src="assets/french-flag2.png"/>   
+          <img style={therror3} className="lependu lependu3" src="assets/french-flag3.png"/>  
       </div>
 
   	);
