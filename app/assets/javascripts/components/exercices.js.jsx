@@ -287,17 +287,17 @@ var Exercices = React.createClass({
       exptlast = {display: "block"};
     };
     if(this.state.lost == true){
-      next = {display: "none"};
-      intermlast = {display: "none"};
+      $('.next').hide();
+      $('.intermlast').hide();
       $('.exptlast').hide();
       youlost = {display: "block"};
     };
     if(this.state.win == true){
-      next = {display: "none"};
+      $('.next').hide();
       youwin = {display: "block"};
     };
     if(this.state.win2 == true){
-      intermlast = {display: "none"};
+      $('.intermlast').hide();
       youwin2 = {display: "block"};
     };
     if(this.state.win3 == true){  
@@ -363,7 +363,7 @@ var Exercices = React.createClass({
           <input className="next" className="styled-button-9" type="submit" value="Next" onClick={this.onNext} />
         </div>
 
-        <div className="center" style={next}>
+        <div className="center next" style={next}>
           <input className="input" type="text" placeholder="Type only 1 letter" ref="guess" value={this.props.guess} maxLength="1" onKeyDown={this.guessLetter} />
           <button className="help1" type='button' onClick={this.sayIt1}><img  src="assets/speaker.png"/>
              {tranlation1}
@@ -390,7 +390,7 @@ var Exercices = React.createClass({
           <input className="next styled-button-9" type="submit" value="Next" onClick={this.onNext2} />
         </div>
 
-        <div className="center" style={intermlast}>
+        <div className="center intermlast" style={intermlast}>
           <input  className="input"type="text" placeholder="Type only 1 letter" ref="guess2" value={this.props.guess2} maxLength="1" onKeyDown={this.guessLetter2}  />
            <button className="help2" type='button' onClick={this.sayIt2}><img  src="assets/speaker.png"/>
               {tranlation2}
