@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'losts/index'
+  resources :losts
   resources :beginners
   resources :intermediates
   resources :expert

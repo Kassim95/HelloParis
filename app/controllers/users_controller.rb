@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 		if @user.save
 			redirect_to root_path
 		else
-			render json: @user.errors, status: :unprocessable_entity
+			redirect_to root_path
 		end		
 	end
 

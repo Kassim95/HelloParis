@@ -34,7 +34,7 @@ Lesson.create(exercice: "TU JOUE", translation: "YOU PLAY", level: 2)
 
 Lesson.create(exercice: "JE VAIS BIEN", translation: "I AM GOOD", level: 3)
 Lesson.create(exercice: "NOUS SAVONS", translation: "WE KNOW", level: 3)
-Lesson.create(exercice: "MERCI BEACOUP", translation: "THANK YOU VERY MUCH", level: 3)
+Lesson.create(exercice: "MERCI BEAUCOUP", translation: "THANK YOU VERY MUCH", level: 3)
 Lesson.create(exercice: "TU JOUE BIEN", translation: "YOU PLAY WELL", level: 3)
 Lesson.create(exercice: "JE MANGE DU PAIN", translation: "I EAT BREAD", level: 3)
 Lesson.create(exercice: "MON DOIGT", translation: "MY FINGER", level: 3)

@@ -1,37 +1,64 @@
 <div id="tabs">
-	<h2>Hello Paris</h2>
+	<!-- logo -->
+	<img class="logo" src="assets/logo.png" />
   <ul>
+  	<!-- User is logged in -->
 	  <% if session[:user_id]%>
 	    <li><a href="#tabs-1">Profil</a></li>
 	    <li><a href="#tabs-2">Exercices</a></li>
 	    <li><a href="#tabs-3">Rank</a></li>
 	  <% else %>
+	  	<!-- User logged out -->
 	    <li><a href="#tabs-4">Login</a></li>
 	  <% end %>
   </ul>
+  <!-- User is logged in -->
   <% if session[:user_id]%>
+  	<!-- profile page -->
 	  <div id="tabs-1">
-	    <% @current_student = @student.find(session[:user_id])%>
-			<h2 id="greeting">Bonjour, <%= @current_student.email%></h2>
-			<%= link_to("Log out", logout_path, method: :delete)%>
-	    <br>
-			<h2 id="greeting">Score: <%= @current_student.score%> Points</h2>
+		  <div class="white info">
+			    <% @current_student = @student.find(session[:user_id])%>
+					<h2 id="greeting">Bonjour, <%= @current_student.fname%> <%= @current_student.lname%> </h2>
+					<%= link_to("Log out", logout_path, method: :delete)%>
+			    <br>
+					<h2 id="greeting">Score: <%= @current_student.score%> Points</h2>
+			</div>
 	  </div>
+	  <!-- exercices -->
 	  <div id="tabs-2">
-	    <%= react_component 'Exercices', { exercice1: @exercice1, exercice2: @exercice2, exercice3: @exercice3, intermexercice1: @intermexercice1, intermexercice2: @intermexercice2, intermexercice3: @intermexercice3, exptexercice1: @exptexercice1, exptexercice2: @exptexercice2, exptexercice3: @exptexercice3} %>
+	  	<div class="white">
+		    <%= react_component 'Exercices', { exercice1: @exercice1, exercice2: @exercice2, exercice3: @exercice3, intermexercice1: @intermexercice1, intermexercice2: @intermexercice2, intermexercice3: @intermexercice3, exptexercice1: @exptexercice1, exptexercice2: @exptexercice2, exptexercice3: @exptexercice3} %>
+		   </div>
 	  </div>
 	  <div id="tabs-3">
-	    <% i = 1 %>
-	    <% @rank.each do |ranks| %>
-	    	<%= "#{i} - #{ranks.email} ------- #{ranks.score} points" %>
-	    	<% i += 1%>
-	    	<br>
-
-	    <% end %>
+	  <!-- rank -->
+	  <div class="white">
+			  <table class="table" border="1" style="width:100%">
+				  <tr>
+				  	<th>Rank</th>
+				    <th>First Name</th>
+				    <th>Last Name</th>
+				    <th>Score</th>
+				  </tr>
+			    <% i = 1 %>
+			    <% @rank.each do |ranks| %>
+				    <tr>
+				    	<td><%= i %></td>
+				    	<td><%= ranks.fname %></td>
+				    	<td><%= ranks.lname %></td>
+				    	<td><%= ranks.score %></td>
+			    	</tr>	 
+			    	<% i += 1 %>   	
+			    <% end %>
+				</table>
+			</div>
 	  </div>
+	  <!-- User logged out -->
   <% else %>
   	<div id="tabs-4">
-  		<%= react_component 'Login', { session: @session, signup: @user} %>
+  		<div class="white info">
+  			<%= react_component 'Login', { session: @session, signup: @user} %>
+  		</div>
   	</div>
   <% end %>
 </div>
