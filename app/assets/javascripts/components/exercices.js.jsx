@@ -337,7 +337,11 @@ var Exercices = React.createClass({
             <input className="styled-button-9 center3"  type="submit" value="Go to profil" />
           </form>
         </div>
-        <h5 style={btnHide}>Hello France is an application based on the hangman game in order to learn French in a fun and easy way.</h5>
+        <h5 style={btnHide}>Hello France is an application based on the hangman game in order to learn French in a fun and easy way.
+          <br />
+          <br />
+          Beginner: +10points, Pro: +20points, Expert: +30points
+        </h5>
         <input style={btnHide} className="button-0" type="submit" value="Beginner" onClick={this.onClick} />
         <br/>
         <input style={btnHide} className="button-0" type="submit" value="Pro" onClick={this.onClick1} />
@@ -345,7 +349,7 @@ var Exercices = React.createClass({
         <input style={btnHide} className="button-0" type="submit" value="Expert" onClick={this.onClick2} />
 
         <div style={style}>
-          <h5>Objectif: Flip the cards and memorize the 3 words in french and their translation. </h5>
+          <h5>Objectif: Flip the cards and memorize the 3 words in french and their translation.You will have 3 chances to find the right letters! </h5>
           <div className="flashcard thisflash" onMouseEnter = {this.beg} onMouseLeave = {this.begout} >
               <h2 style={hidden} className="francais beg1"><span className="blue">French</span><br/><br/> {this.props.exercice1.exercice}</h2><h2 style={hidden} className="english beg1"><span className="red">English</span><br/><br/>{this.props.exercice1.translation}</h2>
           </div>
@@ -373,7 +377,7 @@ var Exercices = React.createClass({
 
 
         <div style={interm}>
-          <h5>Objectif: Flip the cards and memorize the 3 sentences in french and their translation. </h5>
+          <h5>Objectif: Flip the cards and memorize the 3 sentences in french and their translation.You will have 3 chances to find the right letters! </h5>
           <div className="flashcard thisflash4" onMouseEnter = {this.interm} onMouseLeave = {this.intermout}>
             <h2 style={hidden} style={hidden} className="francais interm1"><span className="blue">French</span><br/><br/> {this.props.intermexercice1.exercice}</h2><h2 style={hidden} stly={hidden} className="english interm1"><span className="red">English</span><br/><br/>{this.props.intermexercice1.translation}</h2>
           </div>
@@ -404,7 +408,7 @@ var Exercices = React.createClass({
         </div>
 
         <div style={expt}>
-          <h5>Objectif: Flip the cards and listen to the audio in french and  memorize their translation. </h5>
+          <h5>Objectif: Flip the cards and click on the speakers and listen closely. You will have 3 chances to find the right letters! </h5>
           <div className="flashcard thisflash7" onMouseEnter = {this.expt} onMouseLeave = {this.exptout}>
             <h2 style={hidden} className="francais expt1"><span className="blue">French</span></h2><button style={hidden} className="expt1" type='button' onClick={this.audioexpert1}><img style={hidden} className="expt1" src="assets/speaker.png"/>
           </button> <h4 style={hidden} className="english expt1"><span className="red">English</span><br/><br/>{this.props.exptexercice1.translation}</h4>

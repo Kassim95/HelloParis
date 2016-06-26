@@ -30,7 +30,7 @@ Lesson.create(exercice: "IL SAIT", translation: "HE KNOWS", level: 2)
 Lesson.create(exercice: "JE SUIS", translation: "I AM", level: 2)
 Lesson.create(exercice: "JE DANCE", translation: "I DANCE", level: 2)
 Lesson.create(exercice: "JE MANGE", translation: "I EAT", level: 2)
-Lesson.create(exercice: "TU JOUE", translation: "YOU PLAY", level: 2)
+Lesson.create(exercice: "TU JOUES", translation: "YOU PLAY", level: 2)
 
 Lesson.create(exercice: "JE VAIS BIEN", translation: "I AM GOOD", level: 3)
 Lesson.create(exercice: "NOUS SAVONS", translation: "WE KNOW", level: 3)
