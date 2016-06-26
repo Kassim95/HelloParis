@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production
 gem 'pry'
 gem 'bcrypt'
 gem 'react-rails', '~> 1.0'
