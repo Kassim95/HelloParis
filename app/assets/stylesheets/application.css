@@ -197,4 +197,7 @@ h5{
 .top{
 	text-align: center;
 }
-
+.input{
+	margin: 0 auto;
+	margin-top: 10px;
+}
