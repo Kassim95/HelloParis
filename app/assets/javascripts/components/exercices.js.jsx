@@ -334,7 +334,7 @@ var Exercices = React.createClass({
         <div style={youwin3}>
           <h1 className="center3"> You won! </h1>
           <form  action="/expert" method='get' >
-            <input className="styled-button-9 center3"  type="submit" value="Go to profil" />
+            <input className="styled-button-9 center3"  type="submit" value="Go to profile" />
           </form>
         </div>
         <h5 style={btnHide}>Hello France is an application based on the hangman game in order to learn French in a fun and easy way.
