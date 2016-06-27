@@ -364,10 +364,11 @@ var Exercices = React.createClass({
         </div>
 
         <div className="center next" style={next}>
-          <input className="input" type="text" placeholder="Type only 1 letter" ref="guess" value={this.props.guess} maxLength="1" onKeyDown={this.guessLetter} />
           <button className="help1" type='button' onClick={this.sayIt1}><img  src="assets/speaker.png"/>
              {tranlation1}
           </button>
+          <br />
+          <input className="input" type="text" placeholder="Type only 1 letter" ref="guess" value={this.props.guess} maxLength="1" onKeyDown={this.guessLetter} />
             {letter.map(function(letter, i){
               indents.push("_ ")
             })}
@@ -391,10 +392,11 @@ var Exercices = React.createClass({
         </div>
 
         <div className="center intermlast" style={intermlast}>
-          <input  className="input"type="text" placeholder="Type only 1 letter" ref="guess2" value={this.props.guess2} maxLength="1" onKeyDown={this.guessLetter2}  />
            <button className="help2" type='button' onClick={this.sayIt2}><img  src="assets/speaker.png"/>
               {tranlation2}
-          </button>                        
+          </button>   
+          <br/>                     
+          <input  className="input"type="text" placeholder="Type only 1 letter" ref="guess2" value={this.props.guess2} maxLength="1" onKeyDown={this.guessLetter2}  />
           <br/>
             {letter2.map(function(letter2, i){
               if (letter2 == " "){
@@ -425,8 +427,9 @@ var Exercices = React.createClass({
         </div>
 
         <div className="exptlast center " style={exptlast}>
+            <span className="help3">{tranlation3}</span>
+            <br/>
           <input className="input" type="text" placeholder="Type only 1 letter" ref="guess3" value={this.props.guess3} maxLength="1" onKeyDown={this.guessLetter3}  />
-            {tranlation3}
           <br/>
             {letter3.map(function(letter3, i){
               if (letter3 == " "){
