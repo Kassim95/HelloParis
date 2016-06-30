@@ -360,7 +360,8 @@ var Exercices = React.createClass({
             <h2 style={hidden} className="francais beg3"><span className="blue">French</span><br/><br/> {this.props.exercice3.exercice}</h2><h2 style={hidden} className="english beg3"><span className="red">English</span><br/><br/>{this.props.exercice3.translation}</h2>
           </div>
           <br/>
-          <input className="next" className="styled-button-9" type="submit" value="Next" onClick={this.onNext} />
+           <br/>
+          <input className="next btnnext" className="styled-button-9" type="submit" value="Next" onClick={this.onNext} />
         </div>
 
         <div className="center next" style={next}>

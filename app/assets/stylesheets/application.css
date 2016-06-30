@@ -13,190 +13,367 @@
  *= require_tree .
  *= require_self
  */
-body{
-	background-image: url("flag.png");
-	background-size: 100%;
-	margin: 0px;
-}
-.logo{
-	height: 70px;
-	width: 200px;
-	margin: 0px;
-}
-#tabs{
-	margin-top: 0px;
-	height: 100%;
-	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-	font-size: 24px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
-	background: #e6f2ff;
-	opacity: 0.9;
+	body{
+		background-image: url("flag.png");
+		background-size: 100%;
+		margin: 0px;
+	}
+	.logo{
+		height: 70px;
+		width: 200px;
+		margin: 0px;
+	}
+	#tabs{
+		margin-top: 0px;
+		height: 1000px;
+		font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26.4px;
+		background: #e6f2ff;
+		opacity: 0.9;
+
+	}
+html, body {margin: 0; height: 100%; overflow: hidden}
+@media all and (min-width: 480px){
+	.ui-tabs .status1 {
+	    border:none;
+	}
+	.ui-tabs .status2 {
+	    border:none;
+	}
+	.ui-tabs .status3 {
+	    border:none;
+	}
+	.ui-tabs .ui-tabs-nav
+	{
+		border-bottom:none;
+	}
+
+	.lependu{
+		height: 250px;
+		width: 250px;
+	}
+	.flashcard{
+		background-image: url('paris.png');
+		background-repeat: no-repeat;
+		background-size: 250px 250px;
+		margin-right: 6%;
+		margin-bottom: 30px;
+		width: 250px;
+		height: 250px;
+		float: left;
+		margin-left: 7%;
+		text-align: center;
+	}
+
+	.next{
+		float: left;
+	}
+	.blue{
+		color: blue;
+	}
+	.red{
+		color: red;
+	}
+	.francais{
+
+	}
+	.english{
+		margin-top: 50px;
+	}
+	.button-0 {
+	    position: relative;
+	    padding: 10px 40px;
+	   	margin-left: 500px;
+	   	margin-top: 20px;
+	    border-radius: 10px;
+	    font-family: 'Helvetica', cursive;
+	    font-size: 25px;
+	    color: #FFF;
+	    text-decoration: none;  
+	    background-color: #3498DB;
+	    border-bottom: 5px solid #2980B9;
+	    text-shadow: 0px -2px #2980B9;
+	    /* Animation */
+	    transition: all 0.1s;
+	    -webkit-transition: all 0.1s;
+	    width: 200px;
+	}
+
+	.button-0:hover, 
+	.button-0:focus {
+	    text-decoration: none;
+	    color: #fff;
+	}
+
+	.button-0:active {
+	    transform: translate(0px,5px);
+	    -webkit-transform: translate(0px,5px);
+	    border-bottom: 1px solid;
+	}
+	.styled-button-9 {
+		background: #00A0D1;
+		background: -moz-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#00A0D1),color-stop(100%,#008DB8));
+		background: -webkit-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+		background: -o-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+		background: -ms-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+		background: linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00A0D1',endColorstr='#008DB8',GradientType=0);
+		padding:8px 20px;
+		color:#cfebf3;
+		font-family:'Helvetica Neue',sans-serif;
+		font-size:13px;
+		border-radius:40px;
+		-moz-border-radius:40px;
+		-webkit-border-radius:40px;
+		border:1px solid #095B7E
+	}
+	.input{
+	border:1px solid #DADADA;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-left:35px;
+	width:310px;
+	height:30px;
+	font-size:14px;
+	box-shadow:0 0 10px;
+	-webkit-box-shadow:0 0 10px;
+	/* For I.E */
+	-moz-box-shadow:0 0 10px;
+	/* For Mozilla Web Browser */
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	/* For I.E */
+	-moz-border-radius:5px
+	/* For Mozilla Web Browser */
+	}
+	.form{
+		margin-left: 36%;
+		margin-top: 20px;
+	}
+	.formsign{
+
+	}
+	.sub{
+		margin-left: 100px;
+	}
+	.signupForm{
+		margin-left: 5px;
+		margin-top: 0px;
+	}
+	.center{
+		margin-left: 35%;
+	}
+	.center2{
+		margin-left: 18%;
+	}
+	.center3{
+		margin-left: 42%;
+	}
+	h5{
+		margin-top: 0px;
+	}
+	.center4{
+		margin-left: 39%;
+	}
+
+	.white{
+		background-color: white;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 10px;
+		height: 475px;
+	}
+	.info{
+		background-image: url("city.png");
+	  background-repeat: no-repeat;
+	  background-position: 100% 120%;
+	}
+	.table{
+		text-align: center;
+	}
+	.top{
+		text-align: center;
+	}
+	.input{
+		margin: 0 auto;
+		margin-top: 10px;
+	}
 
 }
-.ui-tabs .status1 {
-    border:none;
-}
-.ui-tabs .status2 {
-    border:none;
-}
-.ui-tabs .status3 {
-    border:none;
-}
-.ui-tabs .ui-tabs-nav
-{
-	border-bottom:none;
-}
+@media (max-width: 480px) { 
 
-.lependu{
-	height: 250px;
-	width: 250px;
-}
-.flashcard{
-	background-image: url('paris.png');
-	background-repeat: no-repeat;
-	background-size: 250px 250px;
-	margin: 2%;
-	width: 250px;
-	height: 250px;
-	float: left;
-	margin-left: 7%;
-	text-align: center;
-}
+	.ui-tabs .status1 {
+	    border:none;
+	}
+	.ui-tabs .status2 {
+	    border:none;
+	}
+	.ui-tabs .status3 {
+	    border:none;
+	}
+	.ui-tabs .ui-tabs-nav
+	{
+		border-bottom:none;
+	}
 
-.next{
-	float: left;
-}
-.blue{
-	color: blue;
-}
-.red{
-	color: red;
-}
-.francais{
+	.lependu{
+		height: 250px;
+		width: 250px;
+	}
+	.flashcard{
+		background-image: url('paris.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		margin-right: 2%;
+		margin-bottom: 30px;
+		width: 100px;
+		height: 100px;
+		float: left;
+		margin-left: 0px;
+		text-align: center;
+		font-size: 10px;
+		line-height: 10px;
+	}
 
-}
-.english{
-	margin-top: 50px;
-}
-.button-0 {
-    position: relative;
-    padding: 10px 40px;
-   	margin-left: 500px;
-   	margin-top: 20px;
-    border-radius: 10px;
-    font-family: 'Helvetica', cursive;
-    font-size: 25px;
-    color: #FFF;
-    text-decoration: none;  
-    background-color: #3498DB;
-    border-bottom: 5px solid #2980B9;
-    text-shadow: 0px -2px #2980B9;
-    /* Animation */
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
-    width: 200px;
-}
+	.next{
+		float: left;
+	}
+	.blue{
+		color: blue;
+	}
+	.red{
+		color: red;
+	}
+	.francais{
 
-.button-0:hover, 
-.button-0:focus {
-    text-decoration: none;
-    color: #fff;
-}
+	}
+	.english{
+		margin-top: 0px;
+	}
+	.button-0 {
+	    position: relative;
+	    padding: 10px 40px;
+	   	margin-left: 20%;
+	   	margin-top: 20px;
+	    border-radius: 10px;
+	    font-family: 'Helvetica', cursive;
+	    font-size: 25px;
+	    color: #FFF;
+	    text-decoration: none;  
+	    background-color: #3498DB;
+	    border-bottom: 5px solid #2980B9;
+	    text-shadow: 0px -2px #2980B9;
+	    /* Animation */
+	    transition: all 0.1s;
+	    -webkit-transition: all 0.1s;
+	    width: 200px;
+	}
 
-.button-0:active {
-    transform: translate(0px,5px);
-    -webkit-transform: translate(0px,5px);
-    border-bottom: 1px solid;
-}
-.styled-button-9 {
-	background: #00A0D1;
-	background: -moz-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
-	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#00A0D1),color-stop(100%,#008DB8));
-	background: -webkit-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
-	background: -o-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
-	background: -ms-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
-	background: linear-gradient(top,#00A0D1 0%,#008DB8 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00A0D1',endColorstr='#008DB8',GradientType=0);
-	padding:8px 20px;
-	color:#cfebf3;
-	font-family:'Helvetica Neue',sans-serif;
-	font-size:13px;
-	border-radius:40px;
-	-moz-border-radius:40px;
-	-webkit-border-radius:40px;
-	border:1px solid #095B7E
-}
-.input{
-border:1px solid #DADADA;
-margin-top:10px;
-margin-bottom:10px;
-padding-left:35px;
-width:310px;
-height:30px;
-font-size:14px;
-box-shadow:0 0 10px;
--webkit-box-shadow:0 0 10px;
-/* For I.E */
--moz-box-shadow:0 0 10px;
-/* For Mozilla Web Browser */
-border-radius:5px;
--webkit-border-radius:5px;
-/* For I.E */
--moz-border-radius:5px
-/* For Mozilla Web Browser */
-}
-.form{
-	margin-left: 36%;
-	margin-top: 20px;
-}
-.formsign{
+	.button-0:hover, 
+	.button-0:focus {
+	    text-decoration: none;
+	    color: #fff;
+	}
 
-}
-.sub{
-	margin-left: 100px;
-}
-.signupForm{
-	margin-left: 5px;
-	margin-top: 0px;
-}
-.center{
-	margin-left: 35%;
-}
-.center2{
-	margin-left: 18%;
-}
-.center3{
-	margin-left: 42%;
-}
-h5{
-	margin-top: 0px;
-}
-.center4{
-	margin-left: 39%;
-}
+	.button-0:active {
+	    transform: translate(0px,5px);
+	    -webkit-transform: translate(0px,5px);
+	    border-bottom: 1px solid;
+	}
+	.styled-button-9 {
+		background: #00A0D1;
+		background: -moz-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#00A0D1),color-stop(100%,#008DB8));
+		background: -webkit-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+		background: -o-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+		background: -ms-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+		background: linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00A0D1',endColorstr='#008DB8',GradientType=0);
+		padding:8px 20px;
+		color:#cfebf3;
+		font-family:'Helvetica Neue',sans-serif;
+		font-size:13px;
+		border-radius:40px;
+		-moz-border-radius:40px;
+		-webkit-border-radius:40px;
+		border:1px solid #095B7E
+	}
+	.input{
+	border:1px solid #DADADA;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-left:35px;
+	width:310px;
+	height:30px;
+	font-size:14px;
+	box-shadow:0 0 10px;
+	-webkit-box-shadow:0 0 10px;
+	/* For I.E */
+	-moz-box-shadow:0 0 10px;
+	/* For Mozilla Web Browser */
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	/* For I.E */
+	-moz-border-radius:5px
+	/* For Mozilla Web Browser */
+	}
+	.form{
+		margin-left: 0px;
+		margin-top: 20px;
 
-.white{
-	background-color: white;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 10px;
-	height: 450px;
-}
-.info{
-	background-image: url("city.png");
-  background-repeat: no-repeat;
-  background-position: 100% 120%;
-}
-.table{
-	text-align: center;
-}
-.top{
-	text-align: center;
-}
-.input{
-	margin: 0 auto;
-	margin-top: 10px;
+	}
+	.formsign{
+
+	}
+	.sub{
+		margin-left: 0px;
+	}
+	.signupForm{
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+	.center{
+		margin-left: 0px;
+	}
+	.center2{
+		margin-left: 0px;
+	}
+	.center3{
+		margin-left: 25%;
+	}
+	h5{
+		margin-top: 0px;
+	}
+	.center4{
+		margin-left: 18%;
+	}
+
+	.white{
+		background-color: white;
+		padding-left: 9px;
+		padding-right: 30px;
+		padding-top: 10px;
+		height: 475px;
+	}
+	.info{
+		background-image: url("city.png");
+	  background-repeat: no-repeat;
+	  background-position: 100% 120%;
+	}
+	.table{
+		text-align: center;
+	}
+	.top{
+		text-align: center;
+	}
+	.input{
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+
 }
