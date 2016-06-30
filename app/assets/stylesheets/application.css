@@ -25,7 +25,7 @@ body{
 }
 #tabs{
 	margin-top: 0px;
-	height: 640px;
+	height: 100%;
 	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 	font-size: 24px;
 	font-style: normal;
@@ -58,17 +58,16 @@ body{
 	background-image: url('paris.png');
 	background-repeat: no-repeat;
 	background-size: 250px 250px;
-	margin: 20px;
+	margin: 2%;
 	width: 250px;
 	height: 250px;
 	float: left;
-	margin-left: 100px;
+	margin-left: 7%;
 	text-align: center;
 }
 
 .next{
 	float: left;
-	margin-left: 100px;
 }
 .blue{
 	color: blue;
@@ -150,7 +149,7 @@ border-radius:5px;
 /* For Mozilla Web Browser */
 }
 .form{
-	margin-left: 420px;
+	margin-left: 36%;
 	margin-top: 20px;
 }
 .formsign{
@@ -164,19 +163,19 @@ border-radius:5px;
 	margin-top: 0px;
 }
 .center{
-	margin-left: 425px;
+	margin-left: 35%;
 }
 .center2{
-	margin-left: 65px;
+	margin-left: 18%;
 }
 .center3{
-	margin-left: 500px;
+	margin-left: 42%;
 }
 h5{
 	margin-top: 0px;
 }
 .center4{
-	margin-left: 465px;
+	margin-left: 39%;
 }
 
 .white{
