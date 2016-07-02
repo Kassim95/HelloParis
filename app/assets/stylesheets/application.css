@@ -60,13 +60,14 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 		background-image: url('paris.png');
 		background-repeat: no-repeat;
 		background-size: 250px 250px;
-		margin-right: 4%;
+		margin-right: 1%;
 		margin-bottom: 30px;
 		width: 250px;
 		height: 250px;
 		float: left;
 		margin-left: 7%;
 		text-align: center;
+		position: relative;
 	}
 
 	.styled-button-9{
@@ -187,6 +188,8 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 		padding-right: 30px;
 		padding-top: 10px;
 		height: 475px;
+		width: 1140px;
+		margin: 0 auto;
 	}
 	.info{
 		background-image: url("city.png");

@@ -389,7 +389,7 @@ var Exercices = React.createClass({
           <div className="flashcard thisflash6" onMouseEnter = {this.interm3} onMouseLeave = {this.intermout3}>
             <h2 style={hidden} className="francais interm3"><span className="blue">French</span><br/><br/> {this.props.intermexercice3.exercice}</h2><h2 style={hidden} className="english interm3"><span className="red">English</span><br/><br/>{this.props.intermexercice3.translation}</h2>
           </div>
-          <input className="next styled-button-9" type="submit" value="Next" onClick={this.onNext2} />
+          <input className="next l" type="submit" value="Next" onClick={this.onNext2} />
         </div>
 
         <div className="center intermlast" style={intermlast}>
