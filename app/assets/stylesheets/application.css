@@ -23,7 +23,9 @@
 		width: 200px;
 		margin: 0px;
 	}
-	#tabs{
+
+@media all and (min-width: 480px){
+		#tabs{
 		margin-top: 0px;
 		height: 700px;
 		width: 1410px;
@@ -38,7 +40,6 @@
 		margin: 0 auto;
 
 	}
-@media all and (min-width: 480px){
 	.ui-tabs .status1 {
 	    border:none;
 	}
@@ -211,6 +212,21 @@
 }
 /*tablet version*/
 @media (max-width: 850px) and (min-width: 480px){
+		#tabs{
+		margin-top: 0px;
+		height: 700px;
+		width: 800px;
+		font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26.4px;
+		background: #e6f2ff;
+		opacity: 0.9;
+		margin: 0 auto;
+
+	}
 	.ui-tabs .status1 {
 	    border:none;
 	}
@@ -384,6 +400,21 @@
 }
 /*mobile*/
 @media (max-width: 480px) { 
+		#tabs{
+		margin-top: 0px;
+		height: 700px;
+		width: 440px;
+		font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 26.4px;
+		background: #e6f2ff;
+		opacity: 0.9;
+
+
+	}
 
 	.ui-tabs .status1 {
 	    border:none;
@@ -527,15 +558,15 @@
 		margin-top: 0px;
 	}
 	.center4{
-		margin-left: 18%;
+		margin-left: 14%;
 	}
 
 	.white{
 		background-color: white;
 		padding-left: 16px;
-		padding-right: 30px;
 		padding-top: 10px;
 		height: 475px;
+		width: 360px;
 	}
 	.info{
 		background-image: url("city.png");
