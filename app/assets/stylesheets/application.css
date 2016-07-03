@@ -209,7 +209,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 
 }
 /*tablet version*/
-@media (max-width: 768px) and (min-width: 480px){
+@media (max-width: 850px) and (min-width: 480px){
 	.ui-tabs .status1 {
 	    border:none;
 	}
