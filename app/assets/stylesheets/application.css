@@ -16,6 +16,7 @@
 	body{
 		background-image: url("flag.png");
 		background-size: 100%;
+		background-repeat: no-repeat;
 		margin: 0px;
 	}
 	.logo{
